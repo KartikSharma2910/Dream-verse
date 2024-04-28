@@ -1,5 +1,6 @@
 import { Box } from "@mui/material";
 import { useEffect, useState } from "react";
+import styles from "./styles";
 
 /**
  * It accepts the date as string in YY:DD:MM format
@@ -37,11 +38,22 @@ const Timer = ({ date = "2024-05-01" }) => {
   };
 
   return (
-    <Box>
-      <Box component="span">{formatTime(timeLeft.days)}</Box>:
-      <Box component="span">{formatTime(timeLeft.hours)}</Box>:
-      <Box component="span">{formatTime(timeLeft.minutes)}</Box>:
-      <Box component="span">{formatTime(timeLeft.seconds)}</Box>
+    <Box sx={styles.wrapper}>
+      <Box component="span" sx={styles.number}>
+        {formatTime(timeLeft.days)}
+      </Box>
+      ⁚
+      <Box component="span" sx={styles.number}>
+        {formatTime(timeLeft.hours)}
+      </Box>
+      ⁚
+      <Box component="span" sx={styles.number}>
+        {formatTime(timeLeft.minutes)}
+      </Box>
+      ⁚
+      <Box component="span" sx={styles.number}>
+        {formatTime(timeLeft.seconds)}
+      </Box>
     </Box>
   );
 };

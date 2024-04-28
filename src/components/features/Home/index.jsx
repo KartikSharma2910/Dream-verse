@@ -1,10 +1,12 @@
-import React, { Fragment } from "react";
+import { Fragment } from "react";
 import Banner from "./Banner";
+import WhyChoose from "./WhyChoose";
 
 const Home = () => {
   return (
     <Fragment>
       <Banner />
+      <WhyChoose />
     </Fragment>
   );
 };
