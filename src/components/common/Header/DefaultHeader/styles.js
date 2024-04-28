@@ -1,9 +1,10 @@
 const styles = {
   wrapper: {
     padding: "0 40px",
-    position: "relative",
     height: "65px",
-    backgroundColor: "black",
+    position: "fixed",
+    zIndex: 10,
+    width: "100%",
     display: "flex",
     alignItems: "center",
     justifyContent: "end",
@@ -17,6 +18,7 @@ const styles = {
     fontFamily: "Dancing Script, cursive",
     fontSize: "28px",
     letterSpacing: "2px",
+    mixBlendMode: "multiply",
   },
 
   image: {

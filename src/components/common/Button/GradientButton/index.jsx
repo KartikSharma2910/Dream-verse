@@ -1,5 +1,6 @@
 import { Button } from "@mui/material";
 import styles from "./styles";
+import "./styles.css";
 
 const GradientButton = ({
   label,
@@ -9,6 +10,7 @@ const GradientButton = ({
 }) => {
   return (
     <Button
+      className="custom-button"
       sx={{ ...styles.wrapper, ...customStyles }}
       variant={variant}
       {...rest}
