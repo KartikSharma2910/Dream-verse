@@ -1,16 +1,17 @@
 .animated-border-box {
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
   align-items: center;
 }
 
 .animated-border-box,
 .animated-border-box-glow {
   position: absolute;
-  transform: skewX(-30deg);
-  width: 65%;
+  transform: skewX(-26deg);
+  width: 60%;
   box-sizing: border-box;
-  height: 180px;
+  height: 160px;
   overflow: hidden;
   z-index: 0;
   border-radius: 10px;

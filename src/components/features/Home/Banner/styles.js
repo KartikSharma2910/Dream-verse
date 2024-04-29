@@ -1,4 +1,9 @@
 const styles = {
+  wrapper: {
+    height: "100vh",
+    overflow: "hidden",
+  },
+
   backgroundImage: {
     width: "100%",
     height: "100%",

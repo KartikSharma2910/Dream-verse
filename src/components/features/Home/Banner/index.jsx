@@ -4,7 +4,7 @@ import styles from "./styles";
 
 const Banner = () => {
   return (
-    <Box component="section">
+    <Box sx={styles.wrapper}>
       <Box component="img" src="/banner.jpeg" sx={styles.backgroundImage} />
       <Box sx={styles.overlay} />
       <Box sx={styles.container}>
