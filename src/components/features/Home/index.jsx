@@ -1,5 +1,6 @@
 import { Fragment } from "react";
 import Banner from "./Banner";
+import NomineeShowcase from "./NomineeShowcase";
 import WhyChoose from "./WhyChoose";
 
 const Home = () => {
@@ -7,6 +8,7 @@ const Home = () => {
     <Fragment>
       <Banner />
       <WhyChoose />
+      <NomineeShowcase />
     </Fragment>
   );
 };
