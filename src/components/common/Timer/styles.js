@@ -32,10 +32,11 @@ const styles = {
       sm: "2rem",
       md: "2.6rem",
     },
-    background:
-      "linear-gradient(to right, #EEF1F0 0%, #EEF1F0 50%, #71757E 50%, #71757E 100%)",
-    "-webkit-background-clip": "text",
-    "-webkit-text-fill-color": "transparent",
+    color: "#C7C0BD",
+    // background:
+    //   "linear-gradient(to right, #EEF1F0 0%, #EEF1F0 50%, #71757E 50%, #71757E 100%)",
+    // "-webkit-background-clip": "text",
+    // "-webkit-text-fill-color": "transparent",
   },
 };
 

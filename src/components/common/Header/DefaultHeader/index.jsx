@@ -5,8 +5,6 @@ import styles from "./styles";
 const DefaultHeader = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
-  // const { screenType } = useResponsive();
-
   const handleScroll = () => {
     if (window.scrollY > 50) {
       setIsScrolled(true);
@@ -21,9 +19,11 @@ const DefaultHeader = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   return (
     <Box sx={{ ...styles.wrapper, display: isScrolled ? "none" : "flex" }}>
       <Box sx={styles.heading}>Dream Verse</Box>
+      {/* <Box component="img" src="/logo.png" sx={styles.logo} /> */}
       <Box component="img" src="/menu.png" sx={styles.image} />
     </Box>
   );

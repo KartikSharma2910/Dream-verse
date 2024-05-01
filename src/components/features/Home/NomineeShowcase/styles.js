@@ -34,6 +34,12 @@ const styles = {
     display: "flex",
     justifyContent: "center",
   },
+
+  cardsWrapper: {
+    display: "flex",
+    padding: "0 30px",
+    justifyContent: "space-between",
+  },
 };
 
 export default styles;

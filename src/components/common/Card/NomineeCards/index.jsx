@@ -1,16 +1,13 @@
 import { Box } from "@mui/material";
-import React from "react";
 import styles from "./styles";
 
-const NomineeCards = () => {
+const NomineeCards = ({ label, heading, text, image, background }) => {
   return (
-    <Box sx={styles.wrapper}>
-      <Box sx={styles.heading}>Ranveer Ahluwalia</Box>
-      <Box sx={styles.description}>
-        CA turned content creator. Makes complex financial concepts easy to
-        understand with humor.
-      </Box>
-      <Box component="img" src="/nominee1.png" sx={styles.image} />
+    <Box sx={{ ...styles.wrapper, backgroundColor: background }}>
+      <Box sx={styles.heading}>{heading}</Box>
+      <Box sx={styles.description}>{text}</Box>
+      <Box component="img" src={image} sx={styles.image} />
+      <Box sx={styles.label}>{label}</Box>
     </Box>
   );
 };

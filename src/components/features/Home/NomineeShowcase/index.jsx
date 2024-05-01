@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 import { Button, Card, InfoContainer, Section } from "components/common";
-import { nominee } from "constants/nominee";
+import { nominee, nomineeCards } from "constants/nominee";
 import { useState } from "react";
 import styles from "./styles";
 
@@ -34,18 +34,10 @@ const NomineeShowcase = () => {
           ))}
         </Box>
         <Box sx={styles.divider} />
-        <Box
-          sx={{
-            display: "flex",
-            padding: "0 30px",
-            justifyContent: "space-between",
-          }}
-        >
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+        <Box sx={styles.cardsWrapper}>
+          {nomineeCards.map((card, index) => (
+            <Card key={index} {...card} />
+          ))}
         </Box>
         <Box sx={styles.divider} />
         <Box sx={styles.buttonWrapper}>

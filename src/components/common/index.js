@@ -5,5 +5,15 @@ import Header from "./Header";
 import InfoContainer from "./InfoContainer";
 import Section from "./Section";
 import Timer from "./Timer";
+import VideoPlayer from "./VideoPlayer";
 
-export { Button, Card, Footer, Header, InfoContainer, Section, Timer };
+export {
+  Button,
+  Card,
+  Footer,
+  Header,
+  InfoContainer,
+  Section,
+  Timer,
+  VideoPlayer,
+};

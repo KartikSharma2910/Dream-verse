@@ -7,7 +7,7 @@ import styles from "./styles";
  * @param {*} date
  * @returns Timer till completed date
  */
-const Timer = ({ date = "2024-05-01" }) => {
+const Timer = ({ date = "2024-05-08" }) => {
   const calculateTimeLeft = () => {
     const difference = +new Date(date) - +new Date();
     let timeLeft = {};
