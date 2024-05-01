@@ -1,10 +1,13 @@
 const styles = {
   wrapper: {
-    height: "min-content",
+    height: "600px",
   },
 
   videoContainer: {
+    position: "absolute",
     height: "450px",
+    left: 0,
+    right: 0,
   },
 };
 

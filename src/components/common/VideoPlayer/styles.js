@@ -7,7 +7,6 @@ const styles = {
     position: "relative",
     borderRadius: "4px",
     overflow: "hidden",
-    boxShadow: "0 4px 65px 0 rgba(255, 255, 255, 0.20)",
   },
 
   video: {

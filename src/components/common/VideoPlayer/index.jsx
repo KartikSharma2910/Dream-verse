@@ -1,4 +1,3 @@
-import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import PlayCircleOutlinedIcon from "@mui/icons-material/PlayCircleOutlined";
 import { Box } from "@mui/material";
 import Fade from "@mui/material/Fade";
@@ -6,7 +5,6 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import styles from "./styles";
 
 const VideoPlayer = ({
-  name,
   src,
   thumbnail,
   customStyles,
@@ -18,7 +16,6 @@ const VideoPlayer = ({
 }) => {
   const ref = useRef(null);
   const [isPaused, setIsPaused] = useState(true);
-  const [time, setTime] = useState({ minu: 0, sec: 0 });
 
   const handleViewChange = useCallback(
     (entries) => {
@@ -58,27 +55,18 @@ const VideoPlayer = ({
       setIsPaused(true);
       ref?.current && ref?.current.pause();
     }
-  }, [currentIdx, index, ref]);
+  }, [currentIdx, index]);
 
   useEffect(() => {
     setIsPaused(true);
     ref?.current && ref?.current.pause();
-  }, [page, ref]);
-
-  useEffect(() => {
-    setTimeout(() => {
-      if (ref?.current?.duration) {
-        const minu = parseInt(ref?.current.duration / 60 + "", 10);
-        const sec = parseInt((ref?.current.duration % 60) + "", 10);
-        setTime({ minu, sec });
-      }
-    }, 500);
-  }, [ref]);
+  }, [page]);
 
   return (
     <Box sx={{ ...styles.wrapper, ...customStyles }}>
       {src && (
         <Box
+          src={src}
           sx={styles.video}
           ref={ref}
           controls
@@ -87,11 +75,8 @@ const VideoPlayer = ({
             typeof setIndex === "function" && setIndex(index);
             setIsPaused(true);
           }}
-        >
-          <source src={src} type="video/mp4" />
-        </Box>
+        />
       )}
-
       {src && isPaused && (
         <Box>
           <Fade
@@ -106,6 +91,7 @@ const VideoPlayer = ({
               onClick={() => {
                 typeof setIndex === "function" && setIndex(index);
                 setIsPaused(false);
+                ref?.current && ref?.current.play();
               }}
             >
               <Box sx={styles.playIcon}>
@@ -117,20 +103,6 @@ const VideoPlayer = ({
                   transform: reverseLayout ? "rotate(180deg)" : "rotate(0deg)",
                 }}
               />
-              {time.sec !== 0 && (
-                <Box sx={styles.timerWrapper}>
-                  <Box sx={styles.title}>{name}</Box>
-                  <Box sx={styles.timerIcons}>
-                    <Box sx={styles.clockIcon}>
-                      <AccessTimeIcon sx={styles.accessIcon} />
-                    </Box>
-                    <Box sx={styles.title}>
-                      {time.minu + ":" + time.sec}
-                      &nbsp;Mins
-                    </Box>
-                  </Box>
-                </Box>
-              )}
               <Box
                 component="img"
                 src={thumbnail || "/videoBanner3.png"}
