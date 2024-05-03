@@ -1,5 +1,6 @@
 import { Fragment } from "react";
 import Banner from "./Banner";
+import Gallery from "./Gallery";
 import NomineeShowcase from "./NomineeShowcase";
 import VideoContainer from "./VideoContainer";
 import WhyChoose from "./WhyChoose";
@@ -11,6 +12,7 @@ const Home = () => {
       <WhyChoose />
       <NomineeShowcase />
       <VideoContainer />
+      <Gallery />
     </Fragment>
   );
 };
