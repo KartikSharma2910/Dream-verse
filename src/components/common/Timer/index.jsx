@@ -38,7 +38,7 @@ const Timer = ({ date = "2024-05-08" }) => {
   };
 
   return (
-    <Box sx={styles.wrapper}>
+    <Box className="timer" sx={styles.wrapper}>
       <Box component="span" sx={styles.number}>
         {formatTime(timeLeft.days)}
       </Box>

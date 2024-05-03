@@ -3,9 +3,20 @@ import { Button, Card, InfoContainer, Section } from "components/common";
 import { nominee, nomineeCards } from "constants/nominee";
 import { useState } from "react";
 import styles from "./styles";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const NomineeShowcase = () => {
   const [showcase, setShowcase] = useState("finance");
+
+  useGSAP(() => {
+    gsap.from(".cards", {
+      y: 30,
+      scale: 0,
+      opacity: 0,
+      duration: 2,
+    });
+  });
 
   return (
     <Section customStyles={styles.wrapper}>
@@ -34,7 +45,7 @@ const NomineeShowcase = () => {
           ))}
         </Box>
         <Box sx={styles.divider} />
-        <Box sx={styles.cardsWrapper}>
+        <Box className="cards" sx={styles.cardsWrapper}>
           {nomineeCards.map((card, index) => (
             <Card key={index} {...card} />
           ))}
