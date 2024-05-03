@@ -27,133 +27,42 @@ const Gallery = () => {
             </Box>
           ))}
         </Box>
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "space-between",
-          }}
-        >
+        <Box sx={styles.dataContainer}>
           <InfoContainer
             label="Gallery"
             heading="Explore Memorable Moments and Fan Creations"
             description="Empower Your Favorites, Shape the Show"
             text="Delve into the heart of Dream Verse with our captivating gallery section. Whether through a dynamic carousel or an organized grid layout, relive the magic of past events as we showcase behind-the-scenes photos, candid moments, and interactions that define the essence of our celebration. Additionally, discover the creativity and passion of our devoted fans as we feature their artwork and heartfelt messages dedicated to their favorite creators."
-            customStyles={{
-              width: "65%",
-            }}
+            customStyles={styles.infoContainer}
           />
-          <Box
-            sx={{
-              width: "30%",
-              height: "300px",
-            }}
-          >
-            <Box
-              component="img"
-              src="/gallery1.png"
-              sx={{
-                width: "100%",
-                height: "150px",
-                objectFit: "cover",
-              }}
-            />
-            <Box
-              component="img"
-              src="/gallery2.png"
-              sx={{
-                width: "100%",
-                height: "150px",
-                objectFit: "cover",
-              }}
-            />
+          <Box sx={styles.infoImageContainer}>
+            <Box component="img" src="/gallery1.png" sx={styles.infoImage} />
+            <Box component="img" src="/gallery2.png" sx={styles.infoImage} />
           </Box>
         </Box>
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "space-between",
-            height: "400px",
-          }}
-        >
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "end",
-              width: "33%",
-              height: "100%",
-            }}
-          >
-            <Box
-              component="img"
-              src="/gallery3.png"
-              sx={{
-                width: "100%",
-                objectFit: "cover",
-              }}
-            />
+        <Box sx={styles.bottomImageContainer}>
+          <Box sx={styles.leftImage}>
+            <Box component="img" src="/gallery3.png" className="leftImage" />
           </Box>
-          <Box
-            sx={{
-              width: "33%",
-              height: "100%",
-            }}
-          >
-            <Box
-              sx={{
-                display: "flex",
-                width: "100%",
-                height: "200px",
-              }}
-            >
+          <Box sx={styles.imageContainer}>
+            <Box sx={styles.upperCenterImage}>
               <Box
                 component="img"
                 src="/gallery4.png"
-                sx={{
-                  width: "50%",
-                  objectFit: "cover",
-                }}
+                className="upperCenterImage"
               />
               <Box
                 component="img"
                 src="/gallery5.png"
-                sx={{
-                  width: "50%",
-                  objectFit: "cover",
-                }}
+                className="upperCenterImage"
               />
             </Box>
-            <Box
-              sx={{
-                height: "200px",
-              }}
-            >
-              <Box
-                component="img"
-                src="/gallery7.png"
-                sx={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
-                }}
-              />
+            <Box sx={styles.bottomCenterImageContainer}>
+              <Box component="img" src="/gallery7.png" sx={styles.image} />
             </Box>
           </Box>
-          <Box
-            sx={{
-              width: "33%",
-              height: "100%",
-            }}
-          >
-            <Box
-              component="img"
-              src="/gallery6.png"
-              sx={{
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-              }}
-            />
+          <Box sx={styles.imageContainer}>
+            <Box component="img" src="/gallery6.png" sx={styles.image} />
           </Box>
         </Box>
       </Box>
