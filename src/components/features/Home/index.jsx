@@ -1,5 +1,6 @@
 import { Fragment } from "react";
 import Banner from "./Banner";
+import FoodAndBevereges from "./FoodAndBeverage";
 import Gallery from "./Gallery";
 import NomineeShowcase from "./NomineeShowcase";
 import UnleashDream from "./UnleashDream";
@@ -15,6 +16,7 @@ const Home = () => {
       <VideoContainer />
       <Gallery />
       <UnleashDream />
+      <FoodAndBevereges />
     </Fragment>
   );
 };

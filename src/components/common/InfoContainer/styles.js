@@ -13,7 +13,7 @@ const styles = {
 
   heading: {
     fontSize: "32px",
-    fontWeight: 600,
+    fontWeight: "bold",
   },
 
   description: {
