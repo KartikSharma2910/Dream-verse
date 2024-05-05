@@ -1,10 +1,15 @@
 import { Box } from "@mui/material";
-import { InfoContainer, Section } from "components/common";
+import { Card, InfoContainer, Section } from "components/common";
+import { foodData } from "constants/food";
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/pagination";
+import { Swiper, SwiperSlide } from "swiper/react";
 import styles from "./styles";
 
 const FoodAndBevereges = () => {
   return (
-    <Section sx={styles.container}>
+    <Section customStyles={styles.container}>
       <Box sx={styles.wrapper}>
         <InfoContainer
           customStyles={styles.infoContainer}
@@ -36,6 +41,19 @@ const FoodAndBevereges = () => {
             sx={styles.bottomStar}
           />
         </Box>
+        <Swiper
+          slidesPerView={4}
+          spaceBetween={30}
+          freeMode={true}
+          pagination={{ clickable: true }}
+          style={styles.swiper}
+        >
+          {foodData.map((card, index) => (
+            <SwiperSlide key={index}>
+              <Card as="FoodCard" {...card} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </Box>
     </Section>
   );

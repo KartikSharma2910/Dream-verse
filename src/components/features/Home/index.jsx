@@ -5,6 +5,7 @@ import Gallery from "./Gallery";
 import NomineeShowcase from "./NomineeShowcase";
 import UnleashDream from "./UnleashDream";
 import VideoContainer from "./VideoContainer";
+import VoteCreators from "./VoteCreators";
 import WhyChoose from "./WhyChoose";
 
 const Home = () => {
@@ -17,6 +18,7 @@ const Home = () => {
       <Gallery />
       <UnleashDream />
       <FoodAndBevereges />
+      <VoteCreators />
     </Fragment>
   );
 };

@@ -59,6 +59,10 @@ const styles = {
     top: -130,
     right: 0,
   },
+
+  swiper: {
+    padding: "4rem 0 0 0",
+  },
 };
 
 export default styles;

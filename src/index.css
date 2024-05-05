@@ -30,6 +30,7 @@ section {
 .swiper {
   width: 100%;
   height: 100%;
+  z-index: -1;
   transition: all 0.4s;
 }
 
@@ -38,7 +39,8 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all 0.4s;
+  z-index: -1;
+  /* transition: all 0.4s; */
 }
 
 @keyframes blink-grow-shrink {
