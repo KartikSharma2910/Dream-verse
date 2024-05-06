@@ -1,5 +1,7 @@
 import { Fragment } from "react";
 import Banner from "./Banner";
+import EventPlanner from "./EventPlanner";
+import FAQ from "./FAQ";
 import FoodAndBevereges from "./FoodAndBeverage";
 import Gallery from "./Gallery";
 import NomineeShowcase from "./NomineeShowcase";
@@ -19,6 +21,8 @@ const Home = () => {
       <UnleashDream />
       <FoodAndBevereges />
       <VoteCreators />
+      <EventPlanner />
+      <FAQ />
     </Fragment>
   );
 };
