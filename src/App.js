@@ -1,14 +1,15 @@
-import { Box } from "@mui/material";
-import { Footer, Header } from "components/common";
-import { Home } from "components/features";
+import { ThemeProvider } from "@mui/material";
+import { BrowserRouter } from "react-router-dom";
+import AppRouter from "router/AppRouter";
+import theme from "styles/theme";
 
 const App = () => {
   return (
-    <Box>
-      <Header />
-      <Home />
-      <Footer />
-    </Box>
+    <BrowserRouter>
+      <ThemeProvider theme={theme}>
+        <AppRouter />
+      </ThemeProvider>
+    </BrowserRouter>
   );
 };
 

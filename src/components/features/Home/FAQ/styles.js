@@ -1,4 +1,8 @@
 const styles = {
+  wrapper: {
+    height: "min-content",
+  },
+
   faqWrapper: {
     display: "flex",
     flexDirection: "column",

@@ -1,10 +1,10 @@
 const styles = {
   wrapper: {
     padding: "0 40px",
-    position: "relative",
+    position: "fixed",
     height: "65px",
-    backgroundColor: "black",
     display: "flex",
+    width: "100%",
     alignItems: "center",
     justifyContent: "space-between",
   },

@@ -46,7 +46,7 @@ const FAQ = () => {
   ];
 
   return (
-    <Section>
+    <Section customStyles={styles.wrapper}>
       <Box sx={styles.faqWrapper}>
         <Box sx={styles.heading}>Your Dream Verse Questions Answered</Box>
         <Box sx={styles.description}>

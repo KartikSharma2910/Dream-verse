@@ -1,3 +1,4 @@
+import { Footer, Header } from "components/common";
 import { Fragment } from "react";
 import Banner from "./Banner";
 import EventPlanner from "./EventPlanner";
@@ -13,6 +14,7 @@ import WhyChoose from "./WhyChoose";
 const Home = () => {
   return (
     <Fragment>
+      <Header />
       <Banner />
       <WhyChoose />
       <NomineeShowcase />
@@ -23,6 +25,7 @@ const Home = () => {
       <VoteCreators />
       <EventPlanner />
       <FAQ />
+      <Footer />
     </Fragment>
   );
 };
