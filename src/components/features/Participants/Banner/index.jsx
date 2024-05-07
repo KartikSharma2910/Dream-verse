@@ -1,11 +1,17 @@
 import { Box } from "@mui/material";
 import { Section } from "components/common";
-import React from "react";
+import styles from "./styles";
 
 const Banner = () => {
   return (
-    <Section>
-      <Box>Banner</Box>
+    <Section customStyles={styles.wrapper}>
+      <Box
+        component="img"
+        src="/participants.png"
+        alt="participants"
+        sx={styles.image}
+      />
+      <Box sx={styles.overlay} />
     </Section>
   );
 };

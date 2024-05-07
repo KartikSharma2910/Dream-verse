@@ -13,6 +13,7 @@ const VideoPlayer = ({
   index,
   setIndex,
   page,
+  passOverlay = true,
 }) => {
   const ref = useRef(null);
   const [isPaused, setIsPaused] = useState(true);
@@ -97,12 +98,16 @@ const VideoPlayer = ({
               <Box sx={styles.playIcon}>
                 <PlayCircleOutlinedIcon sx={styles.icon} />
               </Box>
-              <Box
-                sx={{
-                  ...styles.overlay,
-                  transform: reverseLayout ? "rotate(180deg)" : "rotate(0deg)",
-                }}
-              />
+              {passOverlay && (
+                <Box
+                  sx={{
+                    ...styles.overlay,
+                    transform: reverseLayout
+                      ? "rotate(180deg)"
+                      : "rotate(0deg)",
+                  }}
+                />
+              )}
               <Box
                 component="img"
                 src={thumbnail || "/videoBanner3.png"}

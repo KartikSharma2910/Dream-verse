@@ -1,6 +1,7 @@
 const styles = {
   wrapper: {
     padding: "0 40px",
+    zIndex: 10,
     position: "fixed",
     height: "65px",
     display: "flex",
