@@ -1,3 +1,7 @@
+# FIGMA LINK
+
+https://www.figma.com/file/wYe1Ovgz036RVQqtGbusWT/Vlippr-Landing-pages?type=design&node-id=1605-16162&mode=design&t=ml5r3io0iEWLIL14-0
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
