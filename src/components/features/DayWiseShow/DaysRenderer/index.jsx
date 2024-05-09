@@ -1,20 +1,33 @@
-import { Box } from "@mui/material";
 import EastIcon from "@mui/icons-material/East";
+import { Box } from "@mui/material";
 import { Button, Section } from "components/common";
 import { daysRenderer } from "constants/daysRenderer";
 import { useState } from "react";
+import styles from "./styles";
 
 const DaysRenderer = () => {
   const [idx, setIdx] = useState(0);
 
+  const handleNext = () => {
+    if (idx < 6) {
+      setIdx(idx + 1);
+    }
+  };
+
+  const handlePrevious = () => {
+    if (idx > 0) {
+      setIdx(idx - 1);
+    }
+  };
+
   return (
-    <Section
-      customStyles={{
-        height: "min-content",
-      }}
-    >
+    <Section customStyles={styles.wrapper}>
       <Box>
-        <Box>#Day 0{idx + 1}</Box>
+        <Box sx={styles.dayWrap}>
+          <Box component="span" sx={styles.containerDay}>
+            #Day 0{idx + 1}
+          </Box>
+        </Box>
         {daysRenderer.map(
           (
             { label, headingOne, descriptionOne, headingTwo, descriptionTwo },
@@ -24,46 +37,27 @@ const DaysRenderer = () => {
               key={index}
               sx={{
                 display: idx !== index ? "none" : "flex",
-                flexDirection: "column",
-                gap: "3rem",
-                border: "1px solid white",
+                ...styles.dataRenderer,
               }}
             >
-              <Box
-                sx={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "center",
-                }}
-              >
-                <Button label="Previous" />
-                <Box
-                  sx={{
-                    fontSize: "40px",
-                    fontWeight: "bold",
-                    color: "transparent",
-                    backgroundClip: "text",
-                    "-webkit-background-clip": "text",
-                    "-webkit-text-fill-color": "transparent",
-                    backgroundImage:
-                      "linear-gradient(to right, #F3CB85 100%, #AB7642 100%)",
-                  }}
-                >
+              <Box sx={styles.headerBox}>
+                <Button label="Previous" onClick={handlePrevious} />
+                <Box component="span" sx={styles.heading}>
                   {label}
                 </Box>
                 <Button
                   label={`Day 0${index + 2}`}
                   endIcon={<EastIcon />}
-                  onClick={() => setIdx((prev) => prev + 1)}
+                  onClick={handleNext}
                 />
               </Box>
-              <Box>
-                <Box>{headingOne}</Box>
-                <Box>{descriptionOne}</Box>
+              <Box sx={styles.dataBox}>
+                <Box sx={styles.dataHeading}>{headingOne}</Box>
+                <Box sx={styles.dataDesc}>{descriptionOne}</Box>
               </Box>
-              <Box>
-                <Box>{headingTwo}</Box>
-                <Box>{descriptionTwo}</Box>
+              <Box sx={styles.dataBox}>
+                <Box sx={styles.dataHeading}>{headingTwo}</Box>
+                <Box sx={styles.dataDesc}>{descriptionTwo}</Box>
               </Box>
             </Box>
           )
