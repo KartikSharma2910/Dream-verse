@@ -23,7 +23,7 @@ const styles = {
   accordianContainer: {
     "& .MuiAccordion-root": {
       backgroundColor: "transparent",
-      border: "1px solid #8C8C8C",
+      borderBottom: "1px solid #FDCCDE",
       color: "white",
       margin: "20px",
     },
@@ -42,6 +42,11 @@ const styles = {
     width: "50px",
   },
 
+  icon: {
+    fontSize: "30px",
+    color: "#8E4FFF",
+  },
+
   accordianSummaryWrapper: {
     display: "flex",
     gap: "15px",
@@ -49,14 +54,15 @@ const styles = {
   },
 
   accordianText: {
-    fontSize: "14px",
+    fontSize: "22px",
     fontWeight: 500,
   },
 
   accordianDescription: {
-    fontSize: "14px",
-    color: "#8C8C8C",
-    paddingLeft: "5%",
+    fontSize: "16px",
+    borderLeft: "1px solid #8E4FFF",
+    paddingLeft: "1%",
+    marginLeft: "4%",
   },
 };
 

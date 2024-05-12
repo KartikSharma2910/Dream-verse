@@ -1,5 +1,6 @@
 import DreamCards from "./DreamCards";
 import FoodCard from "./FoodCard";
+import GlowCard from "./GlowCard";
 import NomineeCards from "./NomineeCards";
 import VoteCard from "./VoteCard";
 
@@ -8,6 +9,7 @@ const CardTypeMapping = {
   DreamCards,
   FoodCard,
   VoteCard,
+  GlowCard,
 };
 
 const defaultCardType = "NomineeCards";

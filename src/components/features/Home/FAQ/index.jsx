@@ -62,27 +62,16 @@ const FAQ = () => {
               >
                 <AccordionSummary
                   expandIcon={
-                    <Box
-                      sx={{
-                        ...styles.accordianIcon,
-                        background:
-                          expanded === `panel${index}`
-                            ? "linear-gradient(98.88deg, #6C7BFF -2.99%, #00C2FF 102.28%)"
-                            : "#626262",
-                      }}
-                    >
+                    <Box sx={styles.accordianIcon}>
                       {expanded === `panel${index}` ? (
-                        <RemoveIcon />
+                        <RemoveIcon sx={styles.icon} />
                       ) : (
-                        <AddIcon />
+                        <AddIcon sx={styles.icon} />
                       )}
                     </Box>
                   }
                 >
-                  <Box sx={styles.accordianSummaryWrapper}>
-                    <Box sx={styles.accordianText}>0{index + 1}</Box>
-                    <Box sx={styles.accordianText}>{heading}</Box>
-                  </Box>
+                  <Box sx={styles.accordianText}>{heading}</Box>
                 </AccordionSummary>
                 <AccordionDetails>
                   <Box sx={styles.accordianDescription}>{description}</Box>

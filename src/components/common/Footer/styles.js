@@ -46,6 +46,9 @@ const styles = {
   },
 
   description: {
+    display: "flex",
+    alignItems: "center",
+    gap: "8px",
     fontSize: "14px",
     fontWeight: 200,
   },
@@ -84,6 +87,10 @@ const styles = {
   icon: {
     color: "#8E4FFF",
     fontSize: "22px",
+  },
+
+  infoIcon: {
+    fontSize: "16px",
   },
 };
 

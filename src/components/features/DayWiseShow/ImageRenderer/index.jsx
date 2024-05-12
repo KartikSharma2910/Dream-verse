@@ -37,7 +37,7 @@ const imageRenderer = [
 
 const ImageRenderer = () => {
   return (
-    <Section>
+    <Section customStyles={styles.wrapper}>
       <Box sx={styles.container}>
         {imageRenderer.map(({ image, color, height, bottom }, index) => (
           <Box
@@ -56,39 +56,10 @@ const ImageRenderer = () => {
           </Box>
         ))}
       </Box>
-      <Box
-        sx={{
-          position: "relative",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <Box
-          sx={{
-            fontSize: "24px",
-          }}
-        >
-          Join us this and next seven day
-        </Box>
-        <Box
-          sx={{
-            fontSize: "80px",
-            fontWeight: "bold",
-          }}
-        >
-          Sunday
-        </Box>
-        <Box
-          component="img"
-          src="/enjoy.png"
-          sx={{
-            position: "absolute",
-            bottom: -60,
-            width: "210px",
-          }}
-        />
+      <Box sx={styles.dataContainer}>
+        <Box sx={styles.heading}>Join us this and next seven day</Box>
+        <Box sx={styles.sunday}>Sunday</Box>
+        <Box component="img" src="/enjoy.png" sx={styles.enjoy} />
       </Box>
     </Section>
   );

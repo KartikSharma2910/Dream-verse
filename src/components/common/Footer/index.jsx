@@ -1,6 +1,8 @@
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
+import PhoneInTalkIcon from "@mui/icons-material/PhoneInTalk";
+import LanguageIcon from "@mui/icons-material/Language";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import { Box } from "@mui/material";
 import { helpfulLinks, information } from "constants/footer";
@@ -21,8 +23,13 @@ const Footer = () => {
           </Box>
           <Box sx={styles.container}>
             <Box sx={styles.contactUs}>Contact Us</Box>
-            <Box sx={styles.description}>+91 9236504895</Box>
-            <Box sx={styles.description}>info@shakethespear.com</Box>
+            <Box sx={styles.description}>
+              <PhoneInTalkIcon sx={styles.infoIcon} /> +91 9236504895
+            </Box>
+            <Box sx={styles.description}>
+              <LanguageIcon sx={styles.infoIcon} />
+              info@shakethespear.com
+            </Box>
           </Box>
         </Box>
         <Box sx={styles.informationBox}>
