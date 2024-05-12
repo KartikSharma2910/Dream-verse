@@ -2,7 +2,7 @@ import {
   AboutUs,
   ContactUs,
   DayWiseShow,
-  EventPlanner,
+  EventSelection,
   Home,
   Participants,
   PrivacyPolicy,
@@ -16,7 +16,7 @@ const routes = [
   },
   {
     path: "/event-planner",
-    element: EventPlanner,
+    element: EventSelection,
   },
   {
     path: "/participants",
