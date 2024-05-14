@@ -1,9 +1,9 @@
-import { Box } from "@mui/material";
-import { Button, Section, VideoPlayer } from "components/common";
-import MaleIcon from "@mui/icons-material/Male";
-import YouTubeIcon from "@mui/icons-material/YouTube";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import MaleIcon from "@mui/icons-material/Male";
 import TwitterIcon from "@mui/icons-material/Twitter";
+import YouTubeIcon from "@mui/icons-material/YouTube";
+import { Box } from "@mui/material";
+import { Button, Section } from "components/common";
 import styles from "./styles";
 
 const Awards = () => {
@@ -46,7 +46,7 @@ const Awards = () => {
           <Box sx={styles.upperBoxThree}>
             <Box sx={styles.dataWrapper}>
               <Box sx={styles.dataHeading}>Bio</Box>
-              <Box>
+              <Box sx={styles.mildDescription}>
                 Hi, I'm Riya! A passionate travel vlogger with a knack for
                 storytelling and adventure. Join me as I explore the world one
                 destination at a time.
@@ -62,11 +62,11 @@ const Awards = () => {
               </Box>
               <Box sx={styles.dataLowerTwo}>
                 <Box>
-                  <Box>Subscriber</Box>
+                  <Box sx={styles.infoText}>Subscriber</Box>
                   <Box sx={styles.designText}>230641+</Box>
                 </Box>
                 <Box>
-                  <Box>Watch hour</Box>
+                  <Box sx={styles.infoText}>Watch hour</Box>
                   <Box sx={styles.designText}>980008+</Box>
                 </Box>
               </Box>
@@ -74,32 +74,9 @@ const Awards = () => {
           </Box>
         </Box>
         <Box sx={styles.box}>
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              gap: "20px",
-              width: "65%",
-              padding: "2%",
-              borderRadius: "12px",
-              backgroundColor: "#06060E66",
-              height: "100%",
-              border: "1px solid #999999",
-            }}
-          >
-            <Box
-              sx={{
-                fontSize: "24px",
-                fontWeight: 600,
-              }}
-            >
-              Background
-            </Box>
-            <Box
-              sx={{
-                fontSize: "14px",
-              }}
-            >
+          <Box sx={styles.middleBox}>
+            <Box sx={styles.boldHeading}>Background</Box>
+            <Box sx={styles.mildDescription}>
               From a young age, I've been captivated by the beauty of the world
               and the diversity of cultures. Inspired by my love for travel and
               storytelling, I embarked on a journey to share my experiences with
@@ -113,144 +90,86 @@ const Awards = () => {
               enthusiasts who share my passion for exploration.
             </Box>
           </Box>
-          <Box
-            sx={{
-              width: "35%",
-              height: "100%",
-              padding: "2%",
-              borderRadius: "12px",
-              backgroundColor: "#06060E66",
-              height: "100%",
-              border: "1px solid #999999",
-            }}
-          >
-            <Box
-              sx={{
-                fontSize: "24px",
-                fontWeight: 600,
-              }}
-            >
-              Gender Demographics
-            </Box>
-            <Box>
-              <Box
-                sx={{
-                  display: "flex",
-                }}
-              >
-                <Box
-                  sx={{
-                    position: "relative",
-                  }}
-                >
-                  <Box
-                    component="img"
-                    src="/male.png"
-                    sx={{
-                      width: "200px",
-                    }}
-                  />
-                  <MaleIcon
-                    sx={{
-                      fontSize: "100px",
-                      color: "black",
-                      left: 50,
-                      bottom: 60,
-                      position: "absolute",
-                    }}
-                  />
+          <Box sx={styles.genderBox}>
+            <Box sx={styles.boldHeading}>Gender Demographics</Box>
+            <Box sx={styles.genderMain}>
+              <Box sx={styles.genderContainer}>
+                <Box sx={styles.genderImageWrapper}>
+                  <Box component="img" src="/male.png" sx={styles.maleImage} />
+                  <MaleIcon sx={styles.maleIcon} />
                 </Box>
-
                 <Box>
-                  <Box
-                    sx={{
-                      fontSize: "22px",
-                      fontWeight: "bold",
-                    }}
-                  >
-                    82%
-                  </Box>
-                  <Box>Male Audience</Box>
+                  <Box sx={styles.boldHeading}>82%</Box>
+                  <Box sx={styles.infoText}>Male Audience</Box>
                 </Box>
               </Box>
-              <Box
-                sx={{
-                  display: "flex",
-                  justifyContent: "end",
-                  alignItems: "end",
-                }}
-              >
+              <Box sx={styles.femaleContainer}>
                 <Box>
-                  <Box
-                    sx={{
-                      fontSize: "22px",
-                      fontWeight: "bold",
-                    }}
-                  >
-                    82%
-                  </Box>
-                  <Box>Female Audience</Box>
+                  <Box sx={styles.boldHeading}>82%</Box>
+                  <Box sx={styles.infoText}>Female Audience</Box>
                 </Box>
-                <Box component="img" src="/female.png" />
+                <Box
+                  component="img"
+                  src="/female.png"
+                  sx={styles.femaleImage}
+                />
               </Box>
             </Box>
           </Box>
         </Box>
         <Box sx={{ ...styles.box, flexDirection: "row-reverse" }}>
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              gap: "20px",
-              width: "65%",
-              padding: "2%",
-              borderRadius: "12px",
-              backgroundColor: "#06060E66",
-              height: "100%",
-              border: "1px solid #999999",
-            }}
-          ></Box>
-          <Box
-            sx={{
-              width: "35%",
-              height: "100%",
-              padding: "2%",
-              borderRadius: "12px",
-              backgroundColor: "#06060E66",
-              height: "100%",
-              border: "1px solid #999999",
-            }}
-          >
+          <Box sx={styles.lowerBigBox}>
             <Box>
-              <Box
-                sx={{
-                  fontSize: "24px",
-                  fontWeight: 600,
-                }}
-              >
-                Awards and Recognition
+              <Box sx={styles.boldHeading}>Content Categories</Box>
+              <Box sx={styles.lowerImageContainer}>
+                <Box sx={styles.lowerImageWrapper}>
+                  <Box
+                    component="img"
+                    src="/lifestyle.png"
+                    sx={styles.lowerImage}
+                  />
+                  <Box>Lifestyle</Box>
+                </Box>
+                <Box sx={styles.lowerImageWrapper}>
+                  <Box
+                    component="img"
+                    src="/travelling.png"
+                    sx={styles.lowerImage}
+                  />
+                  <Box>Shopping</Box>
+                </Box>
+                <Box sx={styles.lowerImageWrapper}>
+                  <Box
+                    component="img"
+                    src="/adventure.png"
+                    sx={styles.lowerImage}
+                  />
+                  <Box>Adventure</Box>
+                </Box>
               </Box>
-              <Box
-                sx={{
-                  fontSize: "14px",
-                }}
-              >
+            </Box>
+          </Box>
+          <Box sx={styles.lowerSmallBox}>
+            <Box sx={styles.smallBoxDataContainer}>
+              <Box sx={styles.boldHeading}>Awards and Recognition</Box>
+              <Box sx={styles.mildDescription}>
                 Winner of the Best Travel Vlogger Award at the National Creators
                 Awards 2023.
               </Box>
             </Box>
-            <Box>
-              <Box
-                sx={{
-                  fontSize: "24px",
-                  fontWeight: 600,
-                }}
-              >
-                Collaborations
-              </Box>
-              <Box>
-                <Box component="img" src="/airbnb.png" />
-                <Box component="img" src="/lonely.png" />
+            <Box sx={styles.smallBoxDataContainer}>
+              <Box sx={styles.boldHeading}>Collaborations</Box>
+              <Box sx={styles.smallBoxImages}>
+                <Box
+                  component="img"
+                  src="/airbnb.png"
+                  sx={styles.lowerImageMain}
+                />
+                <Box
+                  component="img"
+                  src="/lonely.png"
+                  sx={styles.lowerImageMain}
+                />
               </Box>
             </Box>
           </Box>
