@@ -1,9 +1,30 @@
 import { Box } from "@mui/material";
-import { InfoContainer, Section } from "components/common";
+import {
+  Button,
+  DropDown,
+  FormContainer,
+  InfoContainer,
+  Input,
+  Popper,
+  Section,
+} from "components/common";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
 import styles from "./styles";
 import "./styles.css";
 
 const WhyChoose = () => {
+  const [open, setOpen] = useState(false);
+
+  const {
+    control,
+    formState: { errors },
+  } = useForm({
+    defaultValues: {},
+    criteriaMode: "all",
+    mode: "all",
+  });
+
   return (
     <Section customStyles={styles.wrapper}>
       <Box sx={styles.main}>
@@ -26,6 +47,7 @@ const WhyChoose = () => {
         </Box> */}
         <Box sx={styles.dataWrapper}>
           <InfoContainer
+            buttonClick={() => setOpen(true)}
             customStyles={styles.infoContainer}
             label="Dreams come to life and creativity knows no bounds."
             heading="Welcome to Dream Verse"
@@ -80,6 +102,62 @@ const WhyChoose = () => {
           </Box>
         </Box>
       </Box>
+      <Popper open={open} handleClose={() => setOpen(false)}>
+        <FormContainer
+          heading="Content Creator Registration & Awards Nomination"
+          description="Welcome to Dreamverse, the ultimate celebration of online content creation! We're excited to provide a platform for creators to connect, showcase their talents, and be recognized for their achievements."
+          formHeading="Basic Information"
+        >
+          <Input
+            name="contentCreatorName"
+            label="Content Creator Name"
+            customStyles={styles.input}
+            control={control}
+            errors={errors}
+          />
+          <Input
+            name="emailAddress"
+            label="Email Address"
+            customStyles={styles.input}
+            control={control}
+            errors={errors}
+          />
+          <DropDown
+            name="platform"
+            label="Content Platform(s)"
+            options={[]}
+            customStyles={styles.input}
+            control={control}
+            errors={errors}
+          />
+          <Input
+            name="phone"
+            label="Phone"
+            customStyles={styles.input}
+            control={control}
+            errors={errors}
+          />
+          <Input
+            name="channelName"
+            label="Channel Name"
+            customStyles={styles.input}
+            control={control}
+            errors={errors}
+          />
+          <Input
+            name="channelLink"
+            label="Channel Link"
+            customStyles={styles.input}
+            control={control}
+            errors={errors}
+          />
+          <Button
+            as="GradientButton"
+            label="Submit"
+            customStyles={styles.button}
+          />
+        </FormContainer>
+      </Popper>
     </Section>
   );
 };

@@ -85,10 +85,10 @@ theme = createTheme(theme, {
           "&.MuiInputLabel-root": {
             maxWidth: "100%",
           },
-          fontSize: "10px",
+          fontSize: "14px",
           color: "white",
           [theme.breakpoints.down("sm")]: {
-            fontSize: "10px",
+            fontSize: "12px",
           },
           "&.Mui-focused": {
             color: "white",
@@ -110,7 +110,7 @@ theme = createTheme(theme, {
               marginTop: "18px",
             },
           },
-          height: "36px",
+          height: "44px",
           boxSizing: "border-box",
           borderRadius: 5,
           position: "relative",
@@ -123,7 +123,7 @@ theme = createTheme(theme, {
           padding: "10px 12px",
           [theme.breakpoints.down("sm")]: {
             fontSize: "12px",
-            height: "43px",
+            height: "40px",
           },
           "&.Mui-error": {
             borderColor: theme.palette.error.main,

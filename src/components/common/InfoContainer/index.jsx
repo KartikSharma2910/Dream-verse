@@ -8,6 +8,7 @@ const InfoContainer = ({
   description,
   text,
   buttonLabel,
+  buttonClick,
   customStyles,
 }) => {
   return (
@@ -19,7 +20,11 @@ const InfoContainer = ({
       </Box>
       <Box sx={styles.text}>{text}</Box>
       {buttonLabel && (
-        <Button label={buttonLabel} customStyles={styles.button} />
+        <Button
+          label={buttonLabel}
+          onClick={buttonClick}
+          customStyles={styles.button}
+        />
       )}
     </Box>
   );

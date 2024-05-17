@@ -102,6 +102,14 @@ const styles = {
     left: "50%",
     transform: "translate(-50%,-50%)",
   },
+
+  input: {
+    width: "47%",
+  },
+
+  button: {
+    width: "100%",
+  },
 };
 
 export default styles;

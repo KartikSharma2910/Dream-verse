@@ -2,6 +2,7 @@ import {
   AboutUs,
   ContactUs,
   DayWiseShow,
+  ErrorPage,
   EventSelection,
   Home,
   Participants,
@@ -41,6 +42,10 @@ const routes = [
   {
     path: "/contact-us",
     element: ContactUs,
+  },
+  {
+    path: "*",
+    element: ErrorPage,
   },
 ];
 
